@@ -14,6 +14,8 @@ class Kernel extends HttpKernel
         \Illuminate\Http\Middleware\HandleCors::class,
         \Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance::class,
         \Illuminate\Http\Middleware\ValidatePostSize::class,
+        'api',
+        \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
         // \Illuminate\Http\Middleware\TrimStrings::class,
         // \Illuminate\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
